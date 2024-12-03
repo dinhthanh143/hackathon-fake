@@ -114,6 +114,12 @@ while(choice!=8){
 	    for (i=0;i<rows;i++){
 	    	printf("%d\t",arrange[i]);
 		}
+		j=0;
+		for(i=0;i<rows;i++){
+			
+		arr[i][j]=arrange[i];
+			j++;
+		}
 		
 	
 		
