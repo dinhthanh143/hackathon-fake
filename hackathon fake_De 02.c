@@ -6,6 +6,8 @@ int rows,cols,i,j,find_num,temp;
 int arr[100][100];
 int check=0;
 int tich_bien=1;
+int arrange[100];
+int min;
 
 while(choice!=8){
 	printf("\n MENU \n\n 1.Nhap kich co va gia tri cac phan tu cua mang\n 2.In gia tri cac phan tu theo ma tran\n 3.In ra cac phan tu tren duong bien va tinh tich \n 4.In ra cac phan tu nam tren duong cheo chinh\n 5.In ra cac phan tu nam tren duong cheo phu \n 6.Sap xep duong cheo chinh theo thu tu tang dan\n 7.Tim kiem phan tu va in ra vi tri phan tu do \n 8.Thoat\n Lua chon cua ban: ");
@@ -25,6 +27,7 @@ while(choice!=8){
 			scanf("%d", &arr[i][j]);
 		}
 		}
+		
 		break;
 	//2.In gia tri cac phan tu theo ma tran
 	case 2:
@@ -86,31 +89,34 @@ while(choice!=8){
 	   
 	//6.Sap xep duong cheo chinh theo thu tu tang dan
 	case 6:
-			if(rows!=cols){
+			
+				if(rows!=cols){
     		printf("\n so hang can bang so cot!\n");
 		}else{
 			j=0;
-		for(i=0;i<rows-1;i++){
-			
-			if(arr[i+1][j+1]<arr[i][j]){
-				temp=arr[i+1][j+1];
-				arr[i+1][j+1]=arr[i][j];
-				arr[i][j]=temp;
-				
-			}
-			j++;
-			
-		}
-		
-		j=0;
 		for(i=0;i<rows;i++){
 			
-		printf("%d\t",arr[i][j]);
+		arrange[i]=arr[i][j];
 			j++;
 		}
-		
-		
 		}
+		
+		for(i=0;i<rows;i++){
+				min=arrange[i];
+				for(j=i+1;j<rows;j++){
+					if (arrange[j]<min){
+						min=arrange[j];
+						arrange[j]=arrange[i];
+						arrange[i]=min;
+					}
+				}
+		}
+	    for (i=0;i<rows;i++){
+	    	printf("%d\t",arrange[i]);
+		}
+		
+	
+		
 		
 		break;
 		
