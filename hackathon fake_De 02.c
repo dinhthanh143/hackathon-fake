@@ -31,12 +31,13 @@ while(choice!=8){
 		break;
 	//2.In gia tri cac phan tu theo ma tran
 	case 2:
+		if(rows>0 && cols>0){
 		for(i=0;i<rows;i++){
-			printf("\n");
 			for(j=0;j<cols;j++){
 		printf("%d\t", arr[i][j]);
+	  	 } printf("\n");
+       		 }
 	}
-}
         break;
     //4.In ra cac phan tu nam tren duong cheo chinh
     case 4:
@@ -158,7 +159,7 @@ while(choice!=8){
 				}
 				}
 			printf("\n tich la : %d",tich_bien);
-			
+			break;
 		}
 		
 		
