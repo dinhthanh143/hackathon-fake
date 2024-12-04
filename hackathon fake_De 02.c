@@ -130,36 +130,19 @@ while(choice!=8){
 	//3.In ra cac phan tu tren duong bien va tinh tich
 	case 3:
 				
-			for(i=0;i<1;i++){
-				for(j=0;j<cols;j++){
-				printf("%d\t",arr[i][j]);
-				tich_bien =tich_bien*arr[i][j];	
-				}
-				}
-				printf("\n");
-				
-				for(i=1;i<rows-1;i++){
-					j=0;
-						printf("%d\t",arr[i][j]);
-					tich_bien =tich_bien*arr[i][j];
-					
-				}
-				
-				for(i=1;i<rows-1;i++){
-					j=cols-1;
-						printf("%d\t",arr[i][j]);
-					tich_bien =tich_bien*arr[i][j];
-				}
-				printf("\n");
-				for(i=rows-1;i<=rows-1;i++){
-				for(j=0;j<cols;j++){
-				printf("%d\t",arr[i][j]);
-					
-				tich_bien =tich_bien*arr[i][j];
-				}
-				}
-			printf("\n tich la : %d",tich_bien);
-			break;
+				for(i=0;i<rows;i++){
+		for(j=0;j<cols;j++){
+			if(i==0 || j==0 || i==rows-1|| j==cols-1){
+					printf("%d\t",arr[i][j]);
+						tich_bien =tich_bien*arr[i][j];
+			}
+		
+			
+			
+		}
+		
+	}	printf("\n tich la : %d",tich_bien);
+	 break;
 		}
 		
 		
