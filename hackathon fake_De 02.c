@@ -128,26 +128,7 @@ while(choice!=8){
 		
 	//3.In ra cac phan tu tren duong bien va tinh tich
 	case 3:
-		if (rows==2){
-			for(i=0;i<1;i++){
-				for(j=0;j<cols;j++){
-				printf("%d\t",arr[i][j]);	
-				tich_bien=tich_bien*arr[i][j];
-				}
 				
-			}
-			printf("\n");
-			
-			for(i=rows-1;i<=rows-1;i++){
-				for(j=0;j<cols;j++){
-				printf("%d\t",arr[i][j]);	
-				tich_bien =tich_bien*arr[i][j];
-				}
-				}
-			printf("\n tich la : %d",tich_bien);
-			
-			
-		}else{
 			for(i=0;i<1;i++){
 				for(j=0;j<cols;j++){
 				printf("%d\t",arr[i][j]);
